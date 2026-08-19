@@ -1,65 +1,192 @@
-1. Webbench
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jiaqi Wang — academic homepage">
+  <title>Jiaqi Wang</title>
+  <style>
+    :root{
+      --bg:#fbfbfa;--card:#fff;--text:#202124;--muted:#74787f;
+      --line:#e7e8ea;--accent:#365f83;--soft:#f5f7f8;--maxw:860px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,
+      "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+      font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline;text-underline-offset:3px}
+    .page{width:min(var(--maxw),calc(100% - 42px));margin:auto;padding:60px 0 48px}
+    .hero{display:grid;grid-template-columns:1fr 150px;gap:42px;align-items:center;padding-bottom:40px}
+    h1{font-size:34px;line-height:1.2;margin:0 0 8px;font-weight:650;letter-spacing:-.025em}
+    .identity{margin:0 0 18px;color:var(--muted);font-size:15.5px}
+    .intro{margin:0;max-width:640px;color:#41454a}
+    .quick-links{display:flex;gap:15px;flex-wrap:wrap;margin-top:16px;font-size:14.5px}
+    .quick-links a{color:#4d5d6c}
+    .photo{width:146px;height:178px;justify-self:end;overflow:hidden;border-radius:14px;
+      background:linear-gradient(145deg,#f5f6f7,#eceeef);border:1px solid #e1e4e7;
+      box-shadow:0 7px 22px rgba(0,0,0,.045);position:relative}
+    .photo img{width:100%;height:100%;display:block;object-fit:cover}
+    .placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+      flex-direction:column;color:#8b9096;text-align:center;font-size:12px;padding:12px}
+    .placeholder b{font-size:23px;color:#666c73;letter-spacing:.05em;margin-bottom:4px}
+    section{padding:27px 0;border-top:1px solid var(--line)}
+    .section-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:15px}
+    h2{font-size:17px;margin:0;font-weight:650;letter-spacing:.005em}
+    .sub{font-size:13px;color:var(--muted)}
+    p{margin:0 0 11px}.muted{color:var(--muted)}
+    .news{display:grid;gap:7px}.news-row{display:grid;grid-template-columns:92px 1fr;gap:16px}
+    .date{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums}
+    .timeline{display:grid;gap:14px}.timeline-row{display:grid;grid-template-columns:142px 1fr;gap:18px}
+    .time{color:var(--muted);font-size:14.5px}.title{font-weight:600}
+    .detail{color:var(--muted);font-size:14.5px}
+    .paper{padding:18px 0 20px;border-bottom:1px solid #eee}
+    .paper:first-of-type{padding-top:2px}.paper:last-child{border-bottom:0;padding-bottom:0}
+    .paper-title{font-weight:620;line-height:1.48;margin-bottom:5px}
+    .authors,.venue,.paper-links{font-size:14.5px}.authors{color:#484c50}.venue{color:var(--muted);margin-top:2px}
+    .paper-links{display:flex;gap:12px;margin-top:5px}
+    .paper-note{margin-top:10px;padding:10px 13px;border-left:2px solid #cdd8e1;background:#f7f9fa;
+      border-radius:0 7px 7px 0;color:#555b61;font-size:14px;line-height:1.62}
+    .paper-note strong{color:#757b82;margin-right:5px}
+    footer{border-top:1px solid var(--line);padding-top:23px;color:#93979c;font-size:13px}
+    @media(max-width:680px){
+      .page{width:min(var(--maxw),calc(100% - 28px));padding-top:36px}
+      .hero{grid-template-columns:1fr;gap:24px}.photo{order:-1;justify-self:start;width:116px;height:142px}
+      h1{font-size:30px}.news-row,.timeline-row{grid-template-columns:1fr;gap:2px}.sub{display:none}
+    }
+  </style>
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <div>
+      <h1>Jiaqi Wang</h1>
+      <p class="identity">Ph.D. Student at Tongji University · Visiting Student at CUHK</p>
 
-Webbench是一个在linux下使用的非常简单的网站压测工具。它使用fork()模拟多个客户端同时访问我们设定的URL，测试网站在压力下工作的性能，最多可以模拟3万个并发连接去测试网站的负载能力。Webbench使用C语言编写, 代码实在太简洁，源码加起来不到600行。下载链接：Web Bench Homepage
+      <!-- PERSONAL INTRO: edit these 1–2 sentences freely. -->
+      <p class="intro">
+        I am interested in moving from local prediction toward structured and generative intelligence,
+        with current work on knowledge graph completion (triple set prediction), generative recommendation, and agent memory.
+      </p>
 
-2. Tinyhttpd
+      <div class="quick-links">
+        <!-- Replace # with your own links. -->
+        <a href="#">Google Scholar</a>
+        <a href="#">GitHub</a>
+        <a href="#">Email</a>
+        <!-- <a href="assets/cv.pdf">CV</a> -->
+      </div>
+    </div>
 
-tinyhttpd是一个超轻量型Http Server，使用C语言开发，全部代码只有502行(包括注释)，附带一个简单的Client，可以通过阅读这段代码理解一个 Http Server 的本质。下载链接：Tiny HTTPd | SourceForge.net
+    <div class="photo">
+      <!-- Put your portrait at assets/profile.jpg -->
+      <img src="assets/profile.jpg" alt="Jiaqi Wang"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="placeholder" style="display:none">
+        <b>JW</b>
+        <span>photo<br>assets/profile.jpg</span>
+      </div>
+    </div>
+  </header>
 
-2. CMockery
+  <section id="about">
+    <div class="section-head"><h2>About</h2></div>
+    <p>
+      I am a direct-track Ph.D. student at Tongji University, where I also completed my undergraduate study.
+      I am advised by Prof. Jihong Guan and Prof. Wengen Li.
+      Since August 2026, I have been visiting The Chinese University of Hong Kong (CUHK),
+      working with Prof. Hong Cheng.
+    </p>
 
-cmockery是google发布的用于C单元测试的一个轻量级的框架。它很小巧，对其他开源包没有依赖，对被测试代码侵入性小。cmockery的源代码行数不到3K，你阅读一下will_return和mock的源代码就一目了然了。
+    <!-- OPTIONAL PERSONAL COMMENT: keep / rewrite / delete. -->
+    <p class="muted">
+      I enjoy problems where the prediction target is not an isolated object,
+      but a structured set of mutually dependent decisions.
+    </p>
+  </section>
 
-主要特点：
+  <section id="news">
+    <div class="section-head"><h2>News</h2><span class="sub">Selected updates</span></div>
+    <div class="news">
+      <!-- Add newest items at the top. -->
+      <div class="news-row"><div class="date">2026.08</div><div>Started a research visit at CUHK with Prof. Hong Cheng.</div></div>
+      <div class="news-row"><div class="date">2026</div><div>OKG-LLM was published in <em>IEEE Transactions on Knowledge and Data Engineering</em>.</div></div>
+      <div class="news-row"><div class="date">2026</div><div>Released DiffTSP, a discrete diffusion framework for knowledge graph triple set prediction.</div></div>
+      <div class="news-row"><div class="date">2025.08</div><div>Raker was published in <em>ACM Transactions on Knowledge Discovery from Data</em>.</div></div>
+    </div>
+  </section>
 
-免费且开源，google提供技术支持；
-轻量级的框架，使测试更加快速简单；
-避免使用复杂的编译器特性，对老版本的编译器来讲，兼容性好;
-并不强制要求待测代码必须依赖C99标准，这一特性对许多嵌入式系统的开发很有用
-下载链接：Downloads - cmockery - A lightweight library to simplify and generalize the process of writing unit tests for C applications.
+  <section id="education">
+    <div class="section-head"><h2>Education &amp; Experience</h2></div>
+    <div class="timeline">
+      <div class="timeline-row"><div class="time">Aug. 2026 – Present</div><div><div class="title">The Chinese University of Hong Kong</div><div class="detail">Visiting Student · Host: Prof. Hong Cheng</div></div></div>
+      <div class="timeline-row"><div class="time">Ph.D.</div><div><div class="title">Tongji University</div><div class="detail">Direct-track Ph.D. · Advisors: Prof. Jihong Guan and Prof. Wengen Li</div></div></div>
+      <div class="timeline-row"><div class="time">B.Eng.</div><div><div class="title">Tongji University</div></div></div>
+    </div>
+  </section>
 
-3. cJSON
+  <section id="publications">
+    <div class="section-head"><h2>Publications</h2><span class="sub">Published work + DiffTSP</span></div>
 
-cJSON是C语言中的一个JSON编解码器，非常轻量级，C文件只有500多行，速度也非常理想。
+    <article class="paper">
+      <div class="paper-title">Raker: A Relation-Aware Knowledge Reasoning Model for Inductive Relation Prediction</div>
+      <div class="authors"><strong>Jiaqi Wang</strong>, Wengen Li, Yulou Shu, Jihong Guan, Yichao Zhang, Shuigeng Zhou</div>
+      <div class="venue">ACM Transactions on Knowledge Discovery from Data (TKDD), 2025</div>
+      <div class="paper-links">
+        <a href="https://doi.org/10.1145/3745029" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/ADMIS-TONGJI/Raker" target="_blank" rel="noopener">Code</a>
+      </div>
+      <!-- MY NOTE: edit this 1–2 sentence explanation. -->
+      <div class="paper-note"><strong>My note.</strong>
+        This work studies inductive relation prediction when useful paths are absent or incomplete,
+        and explores relation-aware neighboring evidence as an alternative reasoning signal.
+      </div>
+    </article>
 
-cJSON也存在几个弱点，虽然功能不是非常强大，但cJSON的小身板和速度是最值得赞赏的。其代码被非常好地维护着，结构也简单易懂，可以作为一个非常好的C语言项目进行学习。项目主页:cJSON | SourceForge.net
+    <article class="paper">
+      <div class="paper-title">OKG-LLM: Aligning Ocean Knowledge Graph with Observation Data via LLMs for Global Sea Surface Temperature Prediction</div>
+      <div class="authors">Hanchen Yang, <strong>Jiaqi Wang</strong>, Jiannong Cao, Wengen Li, Jialun Zheng, Yangning Li, Chunyu Miao, Jihong Guan, Shuigeng Zhou, Philip S. Yu</div>
+      <div class="venue">IEEE Transactions on Knowledge and Data Engineering (TKDE), 2026</div>
+      <div class="paper-links">
+        <a href="https://doi.org/10.1109/TKDE.2026.3674110" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/Neoyanghc/OKGLLM" target="_blank" rel="noopener">Code</a>
+      </div>
+      <!-- MY NOTE: edit this 1–2 sentence explanation. -->
+      <div class="paper-note"><strong>My note.</strong>
+        This work explores how structured ocean knowledge can be aligned with numerical observations
+        and incorporated into LLM-based time-series forecasting.
+      </div>
+    </article>
 
-3. Libev
+    <article class="paper">
+      <div class="paper-title">One Pass for All: A Discrete Diffusion Model for Knowledge Graph Triple Set Prediction</div>
+      <div class="authors">Jihong Guan, <strong>Jiaqi Wang</strong>, Wengen Li, Hanchen Yang, Yichao Zhang, Shuigeng Zhou</div>
+      <div class="venue">Preprint, 2026</div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2604.18344" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/ADMIS-TONGJI/DiffTSP" target="_blank" rel="noopener">Code</a>
+      </div>
+      <!-- MY NOTE: edit this 1–2 sentence explanation. -->
+      <div class="paper-note"><strong>My note.</strong>
+        This work moves knowledge graph completion from query-level link prediction toward
+        set-level generation, modeling missing triples jointly through discrete diffusion.
+      </div>
+    </article>
+  </section>
 
-libev是一个开源的事件驱动库，基于epoll，kqueue等OS提供的基础设施。其以高效出名，它可以将IO事件，定时器，和信号统一起来，统一放在事件处理这一套框架下处理。基于Reactor模式，效率较高，并且代码精简（4.15版本8000多行），是学习事件驱动编程的很好的资源。下载链接：http://software.schmorp.de/pkg/libev.html
+  <section id="research">
+    <div class="section-head"><h2>Research</h2></div>
+    <!-- SECOND PERSONAL EXPLANATION: another optional 1–2 sentence research statement. -->
+    <p>
+      Broadly, I am interested in structured prediction and generation:
+      how models can reason over relations, generate coherent sets of outputs,
+      and retain useful information over long-term interaction.
+    </p>
+    <p class="muted">Knowledge Graphs · Structured Generation · Generative Recommendation · Agent Memory</p>
+  </section>
 
-4. Memcached
-
-Memcached 是一个高性能的分布式内存对象缓存系统，用于动态Web应用以减轻数据库负载。它通过在内存中缓存数据和对象来减少读取数据库的次数，从而提供动态数据库驱动网站的速度。Memcached 基于一个存储键/值对的 hashmap。Memcached-1.4.7的代码量还是可以接受的，只有10K行左右。下载地址：memcached - a distributed memory object caching system
-
-5. Lua
-
-Lua很棒，Lua是巴西人发明的，这些都令我不爽，但是还不至于脸红，最多眼红。
-
-让我脸红的是Lua的源代码，百分之一百的ANSI C，一点都不掺杂。在任何支持ANSI C编译器的平台上都可以轻松编译通过。我试过，真是一点废话都没有。Lua的代码数量足够小，5.1.4仅仅1.5W行，去掉空白行和注释估计能到1W行。下载地址：The Programming Language Lua
-
-6. SQLite
-
-SQLite是一个开源的嵌入式关系数据库，实现自包容、零配置、支持事务的SQL数据库引擎。 其特点是高度便携、使用方便、结构紧凑、高效、可靠。足够小，大致3万行C代码，250K。 下载地址：SQLite Home Page 。
-
-7. Redis
-
-Redis是一个用ANSI C 编写的开源数据结构服务器。Redis的代码非常容易读懂，代码写的很整洁，并且代码量相对较小（4.5w行，其实也不是很小）。大部分都是单线程的，几乎不依赖其它库。下载地址：redis.io/
-
-8. Nginx
-
-Nginx("engine x") 是一个高性能的 HTTP 和反向代理服务器，也是一个 IMAP/POP3/SMTP 代理服务器 。Nginx 是由 Igor Sysoev 为俄罗斯访问量第二的http://Rambler.ru站点开发的，它已经在该站点运行超过四年多了。Igor 将源代码以类BSD许可证的形式发布。自Nginx 发布四年来，Nginx 已经因为它的稳定性、丰富的功能集、 示例配置文件和低系统资源的消耗而闻名了。
-
-nginx的优秀除了体现在程序结构以及代码风格上，nginx的源码组织也同样简洁明了，目录结构层次结构清晰，值得我们去学习。下载地址：nginx: download。
-
-9. UNIXv6
-
-UNIX V6 的内核源代码包括设备驱动程序在内 约有1 万行，这个数量的源代码，初学者是能够充分理解的。有一种说法是一个人所能理解的代码量上限为1 万行，UNIX V6的内核源代码从数量上看正好在这个范围之内。看到这里，大家是不是也有“如果只有1万行的话没准儿我也能学会”的想法呢？
-
-另一方面，最近的操作系统，例如Linux 最新版的内核源代码据说超过了1000 万行。就算不是初学者，想完全理解全部代码基本上也是不可能的。下载地址：http://minnie.tuhs.org/cgi-bin/utree.pl?file=V6
-
-10. NETBSD
-
-NetBSD是一个免费的，具有高度移植性的 UNIX-like 操作系统，是现行可移植平台最多的操作系统，可以在许多平台上执行，从 64bit alpha 服务器到手持设备和嵌入式设备。NetBSD计划的口号是："Of course it runs NetBSD"。它设计简洁，代码规范，拥有众多先进特性，使得它在业界和学术界广受好评。由于简洁的设计和先进的特征，使得它在生产和研究方面，都有卓越的表现，而且它也有受使用者支持的完整的源代码。许多程序都可以很容易地通过NetBSD Packages Collection获得。下载地址：The NetBSD Project
-
-<wiz_tmp_tag id="wiz-table-range-border" contenteditable="false" style="display: none;">
+  <footer>Last updated: August 2026.</footer>
+</main>
+</body>
+</html>

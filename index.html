@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Jiaqi Wang — academic homepage">
-  <title>Jiaqi Wang</title>
+  <title>Jiaqi Wang (王家祺)</title>
   <style>
     :root{
       --bg:#fbfbfa;--card:#fff;--text:#202124;--muted:#74787f;
@@ -66,14 +66,13 @@
 
       <!-- PERSONAL INTRO: edit these 1–2 sentences freely. -->
       <p class="intro">
-        I am interested in moving from local prediction toward structured and generative intelligence,
-        with current work on knowledge graph completion (triple set prediction), generative recommendation, and agent memory.
+        I am interested in structured and generative intelligence, with current work on knowledge graph completion (triple set prediction), generative recommendation, and agent memory.
       </p>
 
       <div class="quick-links">
         <!-- Replace # with your own links. -->
-        <a href="#">Google Scholar</a>
-        <a href="#">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=0XqI2SoAAAAJ">Google Scholar</a>
+        <a href="https://github.com/CalmaQi">GitHub</a>
         <a href="#">Email</a>
         <!-- <a href="assets/cv.pdf">CV</a> -->
       </div>
@@ -81,11 +80,11 @@
 
     <div class="photo">
       <!-- Put your portrait at assets/profile.jpg -->
-      <img src="assets/profile.jpg" alt="Jiaqi Wang"
+      <img src="profile.jpg" alt="Jiaqi Wang"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="placeholder" style="display:none">
-        <b>JW</b>
-        <span>photo<br>assets/profile.jpg</span>
+        <!-- <b>JW</b> -->
+        <!-- <span>photo<br>assets/profile.jpg</span> -->
       </div>
     </div>
   </header>
@@ -93,42 +92,69 @@
   <section id="about">
     <div class="section-head"><h2>About</h2></div>
     <p>
-      I am a direct-track Ph.D. student at Tongji University, where I also completed my undergraduate study.
+      I am a Ph.D. student at Tongji University, where I also completed my undergraduate study.
       I am advised by Prof. Jihong Guan and Prof. Wengen Li.
-      Since August 2026, I have been visiting The Chinese University of Hong Kong (CUHK),
-      working with Prof. Hong Cheng.
+      Since 2026, I have been visiting The Chinese University of Hong Kong (CUHK), advised by Prof. Hong Cheng.
     </p>
 
     <!-- OPTIONAL PERSONAL COMMENT: keep / rewrite / delete. -->
-    <p class="muted">
-      I enjoy problems where the prediction target is not an isolated object,
-      but a structured set of mutually dependent decisions.
+    <!-- <p class="muted">
+      I enjoy problems where the prediction target is not an isolated object, but a structured set of mutually dependent decisions.
     </p>
-  </section>
+  </section> -->
 
   <section id="news">
     <div class="section-head"><h2>News</h2><span class="sub">Selected updates</span></div>
     <div class="news">
       <!-- Add newest items at the top. -->
       <div class="news-row"><div class="date">2026.08</div><div>Started a research visit at CUHK with Prof. Hong Cheng.</div></div>
-      <div class="news-row"><div class="date">2026</div><div>OKG-LLM was published in <em>IEEE Transactions on Knowledge and Data Engineering</em>.</div></div>
       <div class="news-row"><div class="date">2026</div><div>Released DiffTSP, a discrete diffusion framework for knowledge graph triple set prediction.</div></div>
-      <div class="news-row"><div class="date">2025.08</div><div>Raker was published in <em>ACM Transactions on Knowledge Discovery from Data</em>.</div></div>
+      <div class="news-row"><div class="date">2026</div><div>OKG-LLM was published in <em>TKDE</em>.</div></div>
+      <div class="news-row"><div class="date">2025</div><div>Raker was published in <em>TKDD</em>.</div></div>
     </div>
   </section>
 
   <section id="education">
     <div class="section-head"><h2>Education &amp; Experience</h2></div>
     <div class="timeline">
-      <div class="timeline-row"><div class="time">Aug. 2026 – Present</div><div><div class="title">The Chinese University of Hong Kong</div><div class="detail">Visiting Student · Host: Prof. Hong Cheng</div></div></div>
-      <div class="timeline-row"><div class="time">Ph.D.</div><div><div class="title">Tongji University</div><div class="detail">Direct-track Ph.D. · Advisors: Prof. Jihong Guan and Prof. Wengen Li</div></div></div>
+      <div class="timeline-row"><div class="time">2026 – Present</div><div><div class="title">The Chinese University of Hong Kong</div><div class="detail">Visiting Student · Host: Prof. Hong Cheng</div></div></div>
+      <div class="timeline-row"><div class="time">Ph.D.</div><div><div class="title">Tongji University</div><div class="detail">Ph.D. · Advisors: Prof. Jihong Guan and Prof. Wengen Li</div></div></div>
       <div class="timeline-row"><div class="time">B.Eng.</div><div><div class="title">Tongji University</div></div></div>
     </div>
   </section>
 
   <section id="publications">
-    <div class="section-head"><h2>Publications</h2><span class="sub">Published work + DiffTSP</span></div>
+    <div class="section-head"><h2>Publications</h2></div>
 
+    <article class="paper">
+      <div class="paper-title">One Pass for All: A Discrete Diffusion Model for Knowledge Graph Triple Set Prediction</div>
+      <div class="authors">Jihong Guan*, <strong>Jiaqi Wang*</strong>, Wengen Li, Hanchen Yang, Yichao Zhang, Shuigeng Zhou</div>
+      <div class="venue">Preprint, 2026</div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2604.18344" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/ADMIS-TONGJI/DiffTSP" target="_blank" rel="noopener">Code</a>
+      </div>
+      <!-- MY NOTE: edit this 1–2 sentence explanation. -->
+      <div class="paper-note"><strong>My note.</strong>
+        This work moves knowledge graph completion from query-level link prediction toward set-level generation, modeling missing triples jointly through discrete diffusion.
+      </div>
+    </article>
+  </section>
+    
+    <article class="paper">
+      <div class="paper-title">OKG-LLM: Aligning Ocean Knowledge Graph with Observation Data via LLMs for Global Sea Surface Temperature Prediction</div>
+      <div class="authors">Hanchen Yang*, <strong>Jiaqi Wang*</strong>, Jiannong Cao, Wengen Li, Jialun Zheng, Yangning Li, Chunyu Miao, Jihong Guan, Shuigeng Zhou, Philip S. Yu</div>
+      <div class="venue">IEEE Transactions on Knowledge and Data Engineering (TKDE), 2026</div>
+      <div class="paper-links">
+        <a href="https://doi.org/10.1109/TKDE.2026.3674110" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/Neoyanghc/OKGLLM" target="_blank" rel="noopener">Code</a>
+      </div>
+      <!-- MY NOTE: edit this 1–2 sentence explanation. -->
+      <div class="paper-note"><strong>My note.</strong>
+        This work explores how structured ocean knowledge can be aligned with numerical observations and incorporated into LLM-based time-series forecasting. 
+      </div>
+    </article>
+    
     <article class="paper">
       <div class="paper-title">Raker: A Relation-Aware Knowledge Reasoning Model for Inductive Relation Prediction</div>
       <div class="authors"><strong>Jiaqi Wang</strong>, Wengen Li, Yulou Shu, Jihong Guan, Yichao Zhang, Shuigeng Zhou</div>
@@ -139,41 +165,11 @@
       </div>
       <!-- MY NOTE: edit this 1–2 sentence explanation. -->
       <div class="paper-note"><strong>My note.</strong>
-        This work studies inductive relation prediction when useful paths are absent or incomplete,
-        and explores relation-aware neighboring evidence as an alternative reasoning signal.
+        This work studies inductive relation prediction when useful paths are absent or incomplete, and explores relation-aware neighboring evidence as an alternative reasoning signal.
       </div>
     </article>
 
-    <article class="paper">
-      <div class="paper-title">OKG-LLM: Aligning Ocean Knowledge Graph with Observation Data via LLMs for Global Sea Surface Temperature Prediction</div>
-      <div class="authors">Hanchen Yang, <strong>Jiaqi Wang</strong>, Jiannong Cao, Wengen Li, Jialun Zheng, Yangning Li, Chunyu Miao, Jihong Guan, Shuigeng Zhou, Philip S. Yu</div>
-      <div class="venue">IEEE Transactions on Knowledge and Data Engineering (TKDE), 2026</div>
-      <div class="paper-links">
-        <a href="https://doi.org/10.1109/TKDE.2026.3674110" target="_blank" rel="noopener">Paper</a>
-        <a href="https://github.com/Neoyanghc/OKGLLM" target="_blank" rel="noopener">Code</a>
-      </div>
-      <!-- MY NOTE: edit this 1–2 sentence explanation. -->
-      <div class="paper-note"><strong>My note.</strong>
-        This work explores how structured ocean knowledge can be aligned with numerical observations
-        and incorporated into LLM-based time-series forecasting.
-      </div>
-    </article>
-
-    <article class="paper">
-      <div class="paper-title">One Pass for All: A Discrete Diffusion Model for Knowledge Graph Triple Set Prediction</div>
-      <div class="authors">Jihong Guan, <strong>Jiaqi Wang</strong>, Wengen Li, Hanchen Yang, Yichao Zhang, Shuigeng Zhou</div>
-      <div class="venue">Preprint, 2026</div>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2604.18344" target="_blank" rel="noopener">Paper</a>
-        <a href="https://github.com/ADMIS-TONGJI/DiffTSP" target="_blank" rel="noopener">Code</a>
-      </div>
-      <!-- MY NOTE: edit this 1–2 sentence explanation. -->
-      <div class="paper-note"><strong>My note.</strong>
-        This work moves knowledge graph completion from query-level link prediction toward
-        set-level generation, modeling missing triples jointly through discrete diffusion.
-      </div>
-    </article>
-  </section>
+    
 
   <section id="research">
     <div class="section-head"><h2>Research</h2></div>
@@ -186,7 +182,73 @@
     <p class="muted">Knowledge Graphs · Structured Generation · Generative Recommendation · Agent Memory</p>
   </section>
 
+
+  <section id="visitors">
+    <div class="section-head">
+      <h2>Visitors</h2>
+    </div>
+
+    <div class="visitor-line">
+      This page has been viewed
+      <span class="visitor-number" id="visitor-count">—</span>
+      times.
+    </div>
+
+    <!--
+      VISITOR COUNTER SETUP
+
+      1. Create a free GoatCounter site.
+      2. Replace YOUR_GOATCOUNTER_CODE below with your own site code.
+         Example:
+           const GOATCOUNTER_CODE = "jiaqiwang";
+      3. In GoatCounter settings, enable:
+         "Allow adding visitor counts on your website"
+
+      The section will automatically show the total view count for this homepage.
+    -->
+  </section>
   <footer>Last updated: August 2026.</footer>
 </main>
+  <script>
+  /*
+    Change only this value after creating your GoatCounter site.
+    Example: const GOATCOUNTER_CODE = "jiaqiwang";
+  */
+  const GOATCOUNTER_CODE = "YOUR_GOATCOUNTER_CODE";
+
+  (function () {
+    if (!GOATCOUNTER_CODE || GOATCOUNTER_CODE === "YOUR_GOATCOUNTER_CODE") {
+      return;
+    }
+
+    const tracker = document.createElement("script");
+    tracker.async = true;
+    tracker.dataset.goatcounter =
+      "https://" + GOATCOUNTER_CODE + ".goatcounter.com/count";
+    tracker.src = "https://gc.zgo.at/count.js";
+    document.body.appendChild(tracker);
+
+    async function loadVisitorCount() {
+      try {
+        /*
+          Homepage path on GitHub Pages is normally "/".
+          GoatCounter's direct counter endpoint uses "//.json" for that path.
+        */
+        const url =
+          "https://" + GOATCOUNTER_CODE + ".goatcounter.com/counter//.json";
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) throw new Error("counter unavailable");
+        const data = await response.json();
+        if (data && data.count) {
+          document.getElementById("visitor-count").textContent = data.count;
+        }
+      } catch (e) {
+        // Keep the graceful dash if the public counter is unavailable.
+      }
+    }
+
+    loadVisitorCount();
+  })();
+</script>
 </body>
 </html>

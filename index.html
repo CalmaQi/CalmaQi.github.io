@@ -106,7 +106,7 @@
 
     <p class="muted">
       我是同济大学博士生，研究方向聚焦于结构化预测与生成式智能，主要研究知识图谱补全、生成式推荐和智能体记忆。
-      目前，我在香港中文大学进行访问研究，围绕知识图谱三元组集合预测和用户行为轨迹预测开展工作。
+      目前，我在香港中文大学进行访问研究，围绕知识图谱三元组集合预测和生成式推荐开展工作。
     </p>
   </section>
 
@@ -142,13 +142,13 @@
         <a href="https://github.com/CalmaQi/LKGDiff" target="_blank" rel="noopener">Code</a>
       </div>
       <div class="paper-note"><strong>My note.</strong>
-        LatentDiff 将知识图谱三元组集合预测统一建模为潜在空间中的图生成任务，通过关系感知残差量化自编码器和观测锚定的潜在扩散过程，缓解传统子图补全中的结构推理碎片化问题。
+        LatentDiff models  triple set prediction as a graph generation task in latent space. Through a relation-aware residual quantization autoencoder and an observation-anchored latent diffusion process, it alleviates the structural reasoning fragmentation problem in conventional subgraph completion.
       </div>
     </article>
 
     <article class="paper">
       <div class="paper-title">From Tokens to Behaviors: Rethinking Generative Recommendation for User Trajectory Prediction</div>
-      <div class="authors"><strong>Jiaqi Wang</strong>, Hanchen Yang, Hengyu Zhang, Hongxu Ma, Wenqi Rao, Hongyang Wang,
+      <div class="authors"><strong>Jiaqi Wang*</strong>, Hanchen Yang*, Hengyu Zhang, Hongxu Ma, Wenqi Rao, Hongyang Wang,
         Zhongbo Sun, Renliang Qian, Weixin Chen, Wengen Li, Jihong Guan,
         Shuigeng Zhou, Qingpeng Cai, Peng Jiang, Hong Cheng</div>
       <div class="venue">arXiv preprint, 2026</div>
@@ -157,7 +157,7 @@
         <a href="https://github.com/CalmaQi/GR4UBT" target="_blank" rel="noopener">Code</a>
       </div>
       <div class="paper-note"><strong>My note.</strong>
-        TraGR 提出行为感知的生成式推荐框架，在每个交互内并行预测语义 ID，并结合概率反馈和关系感知轨迹学习，更好地建模用户行为的连续演化。
+        TraGR proposes a behavior-aware generative recommendation framework that predicts semantic IDs in parallel within each interaction and combines probabilistic feedback with relation-aware trajectory learning to better model the continuous evolution of user behavior.
       </div>
     </article>
 
@@ -250,72 +250,8 @@
   </section>
 
 
-  <section id="visitors">
-    <div class="section-head">
-      <h2>Visitors</h2>
-    </div>
-
-    <div class="visitor-line">
-      This page has been viewed
-      <span class="visitor-number" id="visitor-count">—</span>
-      times.
-    </div>
-
-    <!--
-      VISITOR COUNTER SETUP
-
-      1. Create a free GoatCounter site.
-      2. Replace YOUR_GOATCOUNTER_CODE below with your own site code.
-         Example:
-           const GOATCOUNTER_CODE = "jiaqiwang";
-      3. In GoatCounter settings, enable:
-         "Allow adding visitor counts on your website"
-
-      The section will automatically show the total view count for this homepage.
-    -->
-  </section>
-  <footer>Last updated: 2026.</footer>
+  
+  <footer>Last updated: 2026/11.</footer>
 </main>
-  <script>
-  /*
-    Change only this value after creating your GoatCounter site.
-    Example: const GOATCOUNTER_CODE = "jiaqiwang";
-  */
-  const GOATCOUNTER_CODE = "YOUR_GOATCOUNTER_CODE";
-
-  (function () {
-    if (!GOATCOUNTER_CODE || GOATCOUNTER_CODE === "YOUR_GOATCOUNTER_CODE") {
-      return;
-    }
-
-    const tracker = document.createElement("script");
-    tracker.async = true;
-    tracker.dataset.goatcounter =
-      "https://" + GOATCOUNTER_CODE + ".goatcounter.com/count";
-    tracker.src = "https://gc.zgo.at/count.js";
-    document.body.appendChild(tracker);
-
-    async function loadVisitorCount() {
-      try {
-        /*
-          Homepage path on GitHub Pages is normally "/".
-          GoatCounter's direct counter endpoint uses "//.json" for that path.
-        */
-        const url =
-          "https://" + GOATCOUNTER_CODE + ".goatcounter.com/counter//.json";
-        const response = await fetch(url, { cache: "no-store" });
-        if (!response.ok) throw new Error("counter unavailable");
-        const data = await response.json();
-        if (data && data.count) {
-          document.getElementById("visitor-count").textContent = data.count;
-        }
-      } catch (e) {
-        // Keep the graceful dash if the public counter is unavailable.
-      }
-    }
-
-    loadVisitorCount();
-  })();
-</script>
 </body>
 </html>

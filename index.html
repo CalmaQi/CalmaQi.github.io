@@ -93,21 +93,23 @@
     <div class="section-head"><h2>About</h2></div>
     <p>
       I am a Ph.D. student at Tongji University, where I also completed my undergraduate study.
-      I am advised by Prof. Jihong Guan and Prof. Wengen Li.
-      Since 2026, I have been visiting The Chinese University of Hong Kong (CUHK), advised by Prof. Hong Cheng.
+      I am advised by Prof. <a href="https://cs.tongji.edu.cn/info/1061/2814.htm" target="_blank" rel="noopener">Jihong Guan</a>
+      and Prof. <a href="https://cs.tongji.edu.cn/info/1063/2826.htm" target="_blank" rel="noopener">Wengen Li</a>.
+      Since 2026, I have been visiting The Chinese University of Hong Kong (CUHK), advised by Prof.
+      <a href="https://www.cse.cuhk.edu.hk/people/faculty/hong-cheng/" target="_blank" rel="noopener">Hong Cheng</a>.
     </p>
 
-    <!-- OPTIONAL PERSONAL COMMENT: keep / rewrite / delete. -->
-    <!-- <p class="muted">
-      I enjoy problems where the prediction target is not an isolated object, but a structured set of mutually dependent decisions.
+    <p class="muted">
+      我是同济大学博士生，研究方向聚焦于结构化预测与生成式智能，主要研究知识图谱补全、生成式推荐和智能体记忆。
+      目前，我在香港中文大学进行访问研究，围绕知识图谱三元组集合预测和用户行为轨迹预测开展工作。
     </p>
-  </section> -->
+  </section>
 
   <section id="news">
     <div class="section-head"><h2>News</h2><span class="sub">Selected updates</span></div>
     <div class="news">
       <!-- Add newest items at the top. -->
-      <div class="news-row"><div class="date">2026.08</div><div>Started a research visit at CUHK with Prof. Hong Cheng.</div></div>
+      <div class="news-row"><div class="date">2026</div><div>Started a research visit at CUHK with Prof. <a href="https://www.cse.cuhk.edu.hk/people/faculty/hong-cheng/" target="_blank" rel="noopener">Hong Cheng</a>.</div></div>
       <div class="news-row"><div class="date">2026</div><div>Released DiffTSP, a discrete diffusion framework for knowledge graph triple set prediction.</div></div>
       <div class="news-row"><div class="date">2026</div><div>OKG-LLM was published in <em>TKDE</em>.</div></div>
       <div class="news-row"><div class="date">2025</div><div>Raker was published in <em>TKDD</em>.</div></div>
@@ -117,14 +119,49 @@
   <section id="education">
     <div class="section-head"><h2>Education &amp; Experience</h2></div>
     <div class="timeline">
-      <div class="timeline-row"><div class="time">2026 – Present</div><div><div class="title">The Chinese University of Hong Kong</div><div class="detail">Visiting Student · Host: Prof. Hong Cheng</div></div></div>
-      <div class="timeline-row"><div class="time">Ph.D.</div><div><div class="title">Tongji University</div><div class="detail">Ph.D. · Advisors: Prof. Jihong Guan and Prof. Wengen Li</div></div></div>
+      <div class="timeline-row"><div class="time">2026 – Present</div><div><div class="title">The Chinese University of Hong Kong</div><div class="detail">Visiting Student · Host: Prof. <a href="https://www.cse.cuhk.edu.hk/people/faculty/hong-cheng/" target="_blank" rel="noopener">Hong Cheng</a></div></div></div>
+      <div class="timeline-row"><div class="time">Ph.D.</div><div><div class="title">Tongji University</div><div class="detail">Ph.D. · Advisors: Prof. <a href="https://cs.tongji.edu.cn/info/1061/2814.htm" target="_blank" rel="noopener">Jihong Guan</a> and Prof. <a href="https://cs.tongji.edu.cn/info/1063/2826.htm" target="_blank" rel="noopener">Wengen Li</a></div></div></div>
       <div class="timeline-row"><div class="time">B.Eng.</div><div><div class="title">Tongji University</div></div></div>
     </div>
   </section>
 
   <section id="publications">
     <div class="section-head"><h2>Publications</h2></div>
+    <article class="paper">
+      <div class="paper-title">From Local Recovery to Unified Generation: Discovering Triple Set in Knowledge Graphs via Observation-Anchored Latent Diffusion</div>
+      <div class="authors"><strong>Jiaqi Wang</strong>, Yisen Gao, Huayang Shi, Junhao Hou,
+        <a href="https://cs.tongji.edu.cn/info/1063/2826.htm" target="_blank" rel="noopener">Wengen Li</a>,
+        <a href="https://cs.tongji.edu.cn/info/1061/2814.htm" target="_blank" rel="noopener">Jihong Guan</a>,
+        Yichao Zhang, Shuigeng Zhou, Yangqiu Song,
+        <a href="https://www.cse.cuhk.edu.hk/people/faculty/hong-cheng/" target="_blank" rel="noopener">Hong Cheng</a></div>
+      <div class="venue">arXiv preprint, 2026</div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2610.39114" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/CalmaQi/LKGDiff" target="_blank" rel="noopener">Code</a>
+      </div>
+      <div class="paper-note"><strong>My note.</strong>
+        LatentDiff 将知识图谱三元组集合预测统一建模为潜在空间中的图生成任务，通过关系感知残差量化自编码器和观测锚定的潜在扩散过程，缓解传统子图补全中的结构推理碎片化问题。
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-title">From Tokens to Behaviors: Rethinking Generative Recommendation for User Trajectory Prediction</div>
+      <div class="authors"><strong>Jiaqi Wang</strong>, Hanchen Yang, Hengyu Zhang, Hongxu Ma, Wenqi Rao, Hongyang Wang,
+        Zhongbo Sun, Renliang Qian, Weixin Chen,
+        <a href="https://cs.tongji.edu.cn/info/1063/2826.htm" target="_blank" rel="noopener">Wengen Li</a>,
+        <a href="https://cs.tongji.edu.cn/info/1061/2814.htm" target="_blank" rel="noopener">Jihong Guan</a>,
+        Shuigeng Zhou, Qingpeng Cai, Peng Jiang,
+        <a href="https://www.cse.cuhk.edu.hk/people/faculty/hong-cheng/" target="_blank" rel="noopener">Hong Cheng</a></div>
+      <div class="venue">arXiv preprint, 2026</div>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2611.16159" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/CalmaQi/GR4UBT" target="_blank" rel="noopener">Code</a>
+      </div>
+      <div class="paper-note"><strong>My note.</strong>
+        TraGR 提出行为感知的生成式推荐框架，在每个交互内并行预测语义 ID，并结合概率反馈和关系感知轨迹学习，更好地建模用户行为的连续演化。
+      </div>
+    </article>
+
       <article class="paper">
     <div class="paper-title">
       Adaptive Item-based Collaborative Structures via Noise Rescheduling in Diffusion for Generative Recommendation
@@ -132,7 +169,8 @@
   
     <div class="authors">
       <strong>Jiaqi Wang*</strong>, Tianying Liu*, Heng Chang+,
-      Jihong Guan+, Wengen Li, Shuigeng Zhou
+      <a href="https://cs.tongji.edu.cn/info/1061/2814.htm" target="_blank" rel="noopener">Jihong Guan</a>+,
+      <a href="https://cs.tongji.edu.cn/info/1063/2826.htm" target="_blank" rel="noopener">Wengen Li</a>, Shuigeng Zhou
     </div>
   
     <div class="venue">
@@ -158,7 +196,10 @@
       
     <article class="paper">
       <div class="paper-title">One Pass for All: A Discrete Diffusion Model for Knowledge Graph Triple Set Prediction</div>
-      <div class="authors">Jihong Guan*, <strong>Jiaqi Wang*</strong>, Wengen Li, Hanchen Yang, Yichao Zhang, Shuigeng Zhou</div>
+      <div class="authors"><a href="https://cs.tongji.edu.cn/info/1061/2814.htm" target="_blank" rel="noopener">Jihong Guan</a>*,
+        <strong>Jiaqi Wang*</strong>,
+        <a href="https://cs.tongji.edu.cn/info/1063/2826.htm" target="_blank" rel="noopener">Wengen Li</a>,
+        Hanchen Yang, Yichao Zhang, Shuigeng Zhou</div>
       <div class="venue">Preprint, 2026</div>
       <div class="paper-links">
         <a href="https://arxiv.org/abs/2604.18344" target="_blank" rel="noopener">Paper</a>
@@ -173,7 +214,11 @@
     
     <article class="paper">
       <div class="paper-title">OKG-LLM: Aligning Ocean Knowledge Graph with Observation Data via LLMs for Global Sea Surface Temperature Prediction</div>
-      <div class="authors">Hanchen Yang*, <strong>Jiaqi Wang*</strong>, Jiannong Cao, Wengen Li, Jialun Zheng, Yangning Li, Chunyu Miao, Jihong Guan, Shuigeng Zhou, Philip S. Yu</div>
+      <div class="authors">Hanchen Yang*, <strong>Jiaqi Wang*</strong>, Jiannong Cao,
+        <a href="https://cs.tongji.edu.cn/info/1063/2826.htm" target="_blank" rel="noopener">Wengen Li</a>,
+        Jialun Zheng, Yangning Li, Chunyu Miao,
+        <a href="https://cs.tongji.edu.cn/info/1061/2814.htm" target="_blank" rel="noopener">Jihong Guan</a>,
+        Shuigeng Zhou, Philip S. Yu</div>
       <div class="venue">IEEE Transactions on Knowledge and Data Engineering (TKDE), 2026</div>
       <div class="paper-links">
         <a href="https://doi.org/10.1109/TKDE.2026.3674110" target="_blank" rel="noopener">Paper</a>
@@ -187,7 +232,11 @@
     
     <article class="paper">
       <div class="paper-title">Raker: A Relation-Aware Knowledge Reasoning Model for Inductive Relation Prediction</div>
-      <div class="authors"><strong>Jiaqi Wang</strong>, Wengen Li, Yulou Shu, Jihong Guan, Yichao Zhang, Shuigeng Zhou</div>
+      <div class="authors"><strong>Jiaqi Wang</strong>,
+        <a href="https://cs.tongji.edu.cn/info/1063/2826.htm" target="_blank" rel="noopener">Wengen Li</a>,
+        Yulou Shu,
+        <a href="https://cs.tongji.edu.cn/info/1061/2814.htm" target="_blank" rel="noopener">Jihong Guan</a>,
+        Yichao Zhang, Shuigeng Zhou</div>
       <div class="venue">ACM Transactions on Knowledge Discovery from Data (TKDD), 2025</div>
       <div class="paper-links">
         <a href="https://doi.org/10.1145/3745029" target="_blank" rel="noopener">Paper</a>
@@ -237,7 +286,7 @@
       The section will automatically show the total view count for this homepage.
     -->
   </section>
-  <footer>Last updated: August 2026.</footer>
+  <footer>Last updated: 2026.</footer>
 </main>
   <script>
   /*
